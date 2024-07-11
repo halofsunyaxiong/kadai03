@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+<!-- 共通のhtmlファイルを継承する -->
+
+{% block title %}
+課題3　ラズベリーパイのCGIの練習
+{% endblock %}
+
+
+{% block content %}
+<div class="row g-4 m-5">
+    <!--.row: これは Bootstrap のグリッドシステムで、行（Row）を定義するためのクラスです。行はコンテンツを横方向に配置するために使用されます。-->
+    <!-- .g-4: これは列（Column）の幅を指定するクラスです。g-4 は、4つの等幅の列を意味します。具体的には、画面幅を12等分したうちの4つの列が均等に配置されます  -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="/static/img/in.jpg" class="mb-3 rounded-circle img-fluid" width="100px" />
+                <div class="card-body">
+                    <a href="http://127.0.0.1:8080/yellow" class="btn btn-warning btn-lg">在席</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <!-- col-md-6 は、Bootstrap のグリッドシステムで使用されるクラスで、中サイズのデバイス（タブレットやラップトップなど）において、要素が画面の横幅の半分を占めることを意味します。具体的には、中サイズのデバイスで要素が水平方向に半分のスペースを占有します。-->
+
+        <!--一方、col-lg-3 は、大サイズのデバイス（ラップトップやデスクトップなど、大きな画面解像度のもの）において、要素が画面の四分の一を占めることを意味します。つまり、大サイズのデバイスで要素が水平方向に四分の一のスペースを占有します -->
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="/static/img/out.jpg" class="mb-3 rounded-circle img-fluid" width="100px" />
+                <div class="card-body">
+                    <a href="http://127.0.0.1:8080/green" class="btn btn-success btn-lg">離席</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="/static/img/goout.jpg" class="mb-3 rounded-circle img-fluid" width="100px" />
+                <div class="card-body">
+                    <a href="http://127.0.0.1:8080/red" class="btn btn-danger btn-lg">校外</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="/static/img/close.jpg" class="mb-3 rounded-circle img-fluid" width="100px" />
+                <div class="card-body">
+                    <a href="http://127.0.0.1:8080/404" class="btn btn-primary btn-lg">不在</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
